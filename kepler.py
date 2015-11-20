@@ -2,7 +2,7 @@ from visual import *
 from visual.controls import *
 giant = sphere()
 giant.pos = vector(-1e11,0,0)
-giant.radius = 2e10
+giant.radius = 4e10
 giant.color = color.yellow
 giant.mass = 4e30
 dwarf = sphere()
@@ -10,7 +10,7 @@ dwarf.pos = vector(1.5e11,0,0)
 dwarf.radius = 1e10
 dwarf.color = color.green
 dwarf.mass = 1e29
-dwarf.p = vector(0, 2.6E4, 0) * dwarf.mass
+dwarf.p = vector(0, 0, 2.6E4) * dwarf.mass
 giant.p= -dwarf.p
 '''def change(): # Called by controls when button clicked
       if b.text == 'Click me':

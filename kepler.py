@@ -3,7 +3,7 @@ import ruler
 from pylab import *
 import scipy.interpolate
 from visual import *
-#from visual.control import *
+from visual.controls import *
 from visual.graph import *
 
 def get_func_for_luminosity(r_planet,r_star,scaling_factor):

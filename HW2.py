@@ -5,11 +5,11 @@ g=9.8 # g = 9.8 m/s^2
 size = 0.25 # ball radius = 0.25 m
 mass = 10
 scene = display(title='bouncing projectile', center = (0,5,0),width=1200, height=800, background=(0.5,0.5,0))
-floor = box(length=30, height=0.01, width=4, color=color.blue) # floor
+#floor = box(length=60, height=0.01, width=4, color=color.blue) # floor
 
 #ruler
-ruler1 = ruler.ruler(vector(-15, 0, 1), vector(1,0,0), unit = 2.0, length = 30.0, thickness = 0.2)
-ruler2 = ruler.ruler(vector(-15, 0, 1), vector(0,1,0), unit = 1.0, length = 10.0, thickness = 0.2)
+ruler1 = ruler.ruler(vector(-15, 0, 1), vector(1,0,0), unit = 2.0, length = 60.0, thickness = 0.2)
+ruler2 = ruler.ruler(vector(-15, 0, 1), vector(0,1,0), unit = 1.0, length = 20.0, thickness = 0.2)
 
 #common factor for both ball
 v_initial = 10.0
@@ -30,7 +30,7 @@ ball_1.v = v_initial * vector(cos(theta_initial), sin(theta_initial), 0)
 
 
 #normal ball
-while ball.pos.x < 15.0: # simulate until x=15.0m
+while ball.pos.x < 30.0: # simulate until x=15.0m
     # ruler1 # ruler2
     rate(1000)
     ball.pos += ball.v*dt
@@ -39,7 +39,7 @@ while ball.pos.x < 15.0: # simulate until x=15.0m
         ball.v.y = - ball.v.y
 
 #ball with air drag
-while ball_1.pos.x < 15.0: # simulate until x=15.0m
+while ball_1.pos.x < 30.0: # simulate until x=15.0m
     # ruler1 # ruler2
     rate(1000)
     ball_1.pos += ball_1.v*dt
